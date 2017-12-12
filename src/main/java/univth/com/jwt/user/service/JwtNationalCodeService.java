@@ -7,8 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import univth.com.jwt.user.domain.JwtNationalCode;
 import univth.com.jwt.user.repository.JwtNationalCodeRepository;
 
-import java.util.Optional;
-
 /**
  * Created by TaeHwan
  * 2017. 12. 11. PM 10:33
@@ -26,13 +24,6 @@ public class JwtNationalCodeService {
     @Transactional
     public boolean createNationalCode(String nationalCode){
         log.info(nationalCode);
-//        Optional<JwtNationalCode> jaa = Optional.ofNullable(jwtNationalCodeRepository.findByJwtNationalCode(nationalCode)).ifPresent(
-//                o->{
-//                    JwtNationalCode jwtNationalCode = new JwtNationalCode();
-//                    jwtNationalCode.setJwtNationalCode(nationalCode);
-//                    jwtNationalCodeRepository.save(jwtNationalCode);
-//                });
-//        log.info("jaa : {}", jaa);
         JwtNationalCode jwtNationalCode = new JwtNationalCode();
         jwtNationalCode.setJwtNationalCode(nationalCode);
         jwtNationalCodeRepository.save(jwtNationalCode);

@@ -7,8 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import univth.com.jwt.user.domain.JwtUser;
 import univth.com.jwt.user.repository.JwtUserRepository;
 
-import javax.security.auth.login.LoginException;
-
 /**
  * Created by TaeHwan
  * 2017. 12. 11. PM 6:37
